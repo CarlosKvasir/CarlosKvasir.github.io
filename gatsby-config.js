@@ -8,8 +8,11 @@ module.exports = {
   siteMetadata: {
     title: `Minhas Anotações`,
     description: `Blog com minhas anotações de aprendizado`,
+    author: `Carlos Kvasir`,
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     "gatsby-plugin-typescript",
     {
       resolve: `gatsby-plugin-mdx`,
