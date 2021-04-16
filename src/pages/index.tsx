@@ -1,7 +1,8 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 
-import Header from "../components/header"
+import Layout from "../components/layout"
+import Head from "../components/head"
 
 export const query = graphql`
   query SITE_INDEX_QUERY {
@@ -32,13 +33,8 @@ export const query = graphql`
 
 const HomePage = ({ data }) => {
   return (
-    <React.Fragment>
-      <Header siteTitle="My Title" />
-      <div>
-        <h1>{data.site.siteMetadata.title}</h1>
-        <p>{data.site.siteMetadata.description}</p>
-      </div>
-
+    <Layout>
+      <Head title="Home" />
       <div>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
           <React.Fragment>
@@ -50,7 +46,7 @@ const HomePage = ({ data }) => {
           </React.Fragment>
         ))}
       </div>
-    </React.Fragment>
+    </Layout>
   )
 }
 
