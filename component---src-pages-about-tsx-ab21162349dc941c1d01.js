@@ -1,2 +1,0 @@
-(self.webpackChunkcarloskvasir_me=self.webpackChunkcarloskvasir_me||[]).push([[49],{7557:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return u}});var r=n(7294),a=n(5444),l=function(){return(0,a.K2)("4278130389").site.siteMetadata},u=function(){var e=l(),t=e.title,n=e.description;return r.createElement("div",null,r.createElement("h1",null,t),r.createElement("p",null,n))}}}]);
-//# sourceMappingURL=component---src-pages-about-tsx-ab21162349dc941c1d01.js.map
