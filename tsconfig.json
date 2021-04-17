@@ -1,21 +1,27 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "jsx": "react",
-    "lib": ["dom", "esnext", "es2015", "es2016", "es2017"],
+    "target": "es5",
+    "module": "es6",
+    "types": ["node"],
     "moduleResolution": "node",
-    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "lib": ["dom", "es2015", "es2017"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
+    "noImplicitAny": true,
     "noUnusedParameters": true,
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
-    ],
-    "target": "es2015"
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules/*", "public/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "plugins"]
 }

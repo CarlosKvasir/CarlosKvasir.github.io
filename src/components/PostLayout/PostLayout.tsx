@@ -2,6 +2,8 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React, { ReactNode } from "react"
 
+import Layout from '../Layout'
+
 export const query = graphql`
   query PostByID($id: String!) {
     mdx(id: { eq: $id }) {
@@ -23,11 +25,11 @@ const PostLayout: React.FunctionComponent<PostPageProps> = ({
   const { frontmatter, body } = data.mdx
 
   return (
-    <React.Fragment>
+    <Layout>
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.date}</p>
       <MDXRenderer>{body}</MDXRenderer>
-    </React.Fragment>
+    </Layout>
   )
 }
 

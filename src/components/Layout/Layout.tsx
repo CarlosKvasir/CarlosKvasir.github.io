@@ -1,9 +1,9 @@
 import React from "react"
 
-import "../styles/index.scss"
+import "../../styles/index.scss"
 import * as layoutStyles from "./layout.module.scss"
-import Header from "./header"
-import Footer from "./footer"
+import Header from "../Header"
+import Footer from "../Footer"
 
 const Layout = props => {
   return (

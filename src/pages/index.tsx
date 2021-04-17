@@ -1,8 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/Layout"
 
 export const query = graphql`
   query SITE_INDEX_QUERY {
@@ -34,7 +33,6 @@ export const query = graphql`
 const HomePage = ({ data }) => {
   return (
     <Layout>
-      <Head title="Home" />
       <div>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
           <React.Fragment>

@@ -9,6 +9,7 @@ module.exports = {
     title: `Minhas Anotações`,
     description: `Blog com minhas anotações de aprendizado`,
     author: `Carlos Kvasir`,
+    user: `carloskvasir`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
