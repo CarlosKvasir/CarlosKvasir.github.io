@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <Layout>
       <h1>Page not found</h1>

@@ -1,8 +1,10 @@
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React, { ReactNode } from "react"
+import { RouterProps } from "@reach/router"
 
-import Layout from '../Layout'
+import Layout from "../Layout"
+import { PostQueryData } from "../../interfaces/PostQuery.interface"
 
 export const query = graphql`
   query PostByID($id: String!) {
@@ -16,12 +18,13 @@ export const query = graphql`
   }
 `
 
-type PostPageProps = PostQueryData & RouterProps
+type PostPageProps = {
+  data: PostQueryData
+  props: RouterProps
+  children?: ReactNode
+}
 
-const PostLayout: React.FunctionComponent<PostPageProps> = ({
-  data,
-  ...props
-}) => {
+const PostLayout: React.FC<PostPageProps> = ({ data, ...props }) => {
   const { frontmatter, body } = data.mdx
 
   return (

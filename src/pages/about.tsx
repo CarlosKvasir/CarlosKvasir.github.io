@@ -8,7 +8,7 @@ import logoGitHub from "../assets/github.svg"
 import logoTwitter from "../assets/twitter.svg"
 import logoLinkedin from "../assets/linkedin.svg"
 
-const About = () => {
+const About: React.FC = () => {
   const { author, user } = useSiteMetadata()
 
   return (
@@ -28,7 +28,7 @@ const About = () => {
           <a
             href={`https://github.com/${user}`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <img src={logoGitHub} alt="GitHub logo" />
             GitHub
@@ -36,7 +36,7 @@ const About = () => {
           <a
             href={`https://twitter.com/${user}`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <img src={logoTwitter} alt="Twitter logo" />
             Twitter
@@ -44,7 +44,7 @@ const About = () => {
           <a
             href={`https://www.linkedin.com/in/${user}/`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <img src={logoLinkedin} alt="Linkedin logo" />
             Linkedin
